@@ -7,7 +7,7 @@ import AddRoute from "../AddRoute";
 import RoutesList from "../RoutesList";
 import About from "../About";
 import Contact from "../Contact";
-import NotFound from "../NotFound"
+import NotFound from "../NotFound";
 
 const Main = () => {
   return (
@@ -16,10 +16,10 @@ const Main = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/add_route" component={AddRoute} />
         <Route exact path="/routes" component={RoutesList} />
-        <Route exact path="/about" component={About} /> 
+        <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
         <Route component={NotFound} />
-       </Switch>
+      </Switch>
     </div>
   );
 };
