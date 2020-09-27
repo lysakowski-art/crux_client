@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react';
 
 const RoutesList = () => {
-  return <div className="routes_list">RoutesList</div>;
-};
+    return ( 
+        <div className="routes_list">
+            <ul>
 
+            </ul>
+        </div>
+     );
+}
+ 
 export default RoutesList;

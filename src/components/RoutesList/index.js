@@ -1,2 +1,2 @@
-import RoutesList from "./routesList";
-export default RoutesList;
+import Routes from "./routes";
+export default Routes;
