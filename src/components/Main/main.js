@@ -9,16 +9,16 @@ import About from "../About";
 import Contact from "../Contact";
 import NotFound from "../NotFound";
 
-const Main = () => {
+const Main = ({lang}) => {
   return (
     <div className="container">
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/add_route" component={AddRoute} />
-        <Route exact path="/routes" component={Routes} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/contact" component={Contact} />
-        <Route component={NotFound} />
+        <Route exact path="/" component={()=> <Home lang={lang}/>} />
+        <Route exact path="/add_route" component={()=><AddRoute lang={lang}/>} />
+        <Route exact path="/routes" component={()=><Routes lang={lang}/>} />
+        <Route exact path="/about" component={()=><About lang={lang}/>} />
+        <Route exact path="/contact" component={()=><Contact lang={lang}/>} />
+        <Route component={()=><NotFound lang={lang}/>} />
       </Switch>
     </div>
   );

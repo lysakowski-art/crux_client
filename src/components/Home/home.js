@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import ContactForm from "../Contact";
 
-const Home = () => {
-  const [data, setData] = useState({});
-  const home_URI = "http://127.0.0.1:8000/pages/5f6dba05dfbda66e00c44831";
+const Home = ({ lang }) => {
+  const [data, setData] = useState([]);
+  const home_URI = `http://127.0.0.1:8000/pages/home`;
+    const filteredtLanguage = data.filter(el=> el.language === lang)
+    const correctLanguage = filteredtLanguage.map(el=><div key={el._id}>{el.page_content}</div>)
   useEffect(() => {
     axios
       .get(home_URI)
       .then((res) => {
         if (res.status === 200) {
           if (Object.entries(data).length === 0) {
-            setData(res.data);
+            setData(res.data)
           }
         }
       })
@@ -18,7 +21,8 @@ const Home = () => {
         console.log(error);
       });
   }, [data]);
-  return <div className="home">{data.page_content}</div>;
+
+  return <div className="home">{correctLanguage}</div>;
 };
 
 export default Home;

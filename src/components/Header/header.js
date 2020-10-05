@@ -1,7 +1,12 @@
 import React from "react";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 
-const Header = () => {
+const Header = ({lang,setLang}) => {
+  const handleClick= (e) => {
+    e.preventDefault() 
+    setLang(!lang)
+  }
+
   return (
     <header>
       <Navbar bg="dark" expand="lg" variant="dark">
@@ -15,6 +20,7 @@ const Header = () => {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
+          <Button variant="dark" onClick={handleClick}>{lang ? "PL" : "EN"}</Button>
         </Navbar.Collapse>
       </Navbar>
     </header>
