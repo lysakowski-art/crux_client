@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 // components
@@ -7,16 +7,16 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [lang, setLang] =useState(true)
-  
+  const [lang, setLang] = useState(true);
+
   return (
-    <div className="wrapper">
+
       <Router>
-        <Header lang={lang} setLang={setLang}/>
-        <Main lang={lang}/>
-        <Footer lang={lang}/>
+        <Header lang={lang} setLang={setLang} />
+        <Main lang={lang} />
+        <Footer lang={lang} />
       </Router>
-    </div>
+
   );
 };
 
