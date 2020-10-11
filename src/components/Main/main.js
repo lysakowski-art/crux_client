@@ -14,7 +14,7 @@ const Main = ({ lang }) => {
     <Container className="container">
       <Row className="justify-content-md-center">
         <Col xs="1"/>
-        <Col xs="10"> c
+        <Col xs="10">
           <Switch>
             <Route exact path="/" component={() => <Home lang={lang} />} />
             <Route

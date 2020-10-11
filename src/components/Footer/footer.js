@@ -4,7 +4,10 @@ import {Row, Col} from 'react-bootstrap'
 const Footer = () => {
   return (
     <Row style={{
-      "backgroundColor": "#343a40"
+      "backgroundColor": "#343a40",
+      "height": "50px",
+      "width": "100%",
+      "margin": "0"
     }}>
       <Col xs lg={8}>
         Footer

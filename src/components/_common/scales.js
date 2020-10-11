@@ -1,44 +1,46 @@
-const frenchScale = [
-  null,
-  "0",
-  "1",
-  "2",
-  "2+",
-  "3",
-  "4a/4b",
-  "4c",
-  "5a",
-  "5b",
-  "5c",
-  "5c",
-  "6a",
-  "6a+",
-  "6b",
-  "6b+",
-  "6c",
-  "6c+",
-  "6c+",
-  "7a",
-  "7a",
-  "7a+",
-  "7b",
-  "7b",
-  "7b+",
-  "7c",
-  "7c+",
-  "8a",
-  "8a+",
-  "8b",
-  "8b+",
-  "8c",
-  "8c+",
-  "9a",
-  "9a+",
-  "9b",
-  "9b+",
-  "9c",
-];
-const kurtykaScale = [
+const scales = {
+  scale : { 
+    french : [
+    null,
+    "0",
+    "1",
+    "2",
+    "2+",
+    "3",
+    "4a/4b",
+    "4c",
+    "5a",
+    "5b",
+    "5c",
+    "5c",
+    "6a",
+    "6a+",
+    "6b",
+    "6b+",
+    "6c",
+    "6c+",
+    "6c+",
+    "7a",
+    "7a",
+    "7a+",
+    "7b",
+    "7b",
+    "7b+",
+    "7c",
+    "7c+",
+    "8a",
+    "8a+",
+    "8b",
+    "8b+",
+    "8c",
+    "8c+",
+    "9a",
+    "9a+",
+    "9b",
+    "9b+",
+    "9c",
+  ],
+kurtyka : [
   null,
   "I",
   "II",
@@ -72,9 +74,9 @@ const kurtykaScale = [
   "VI.7",
   "VI.7+",
   "VI.8",
-];
+],
 
-const tatrasScale = [
+tatras : [
   null,
   "I",
   "II",
@@ -109,8 +111,8 @@ const tatrasScale = [
   "XI-",
   "XI",
   "XI+",
-];
-const usaScale = [
+],
+usa : [
   "5.0",
   "5.1",
   "5.2",
@@ -144,13 +146,15 @@ const usaScale = [
   "5.14d",
   "5.15a",
   "5.15b",
-];
+]},
 
-const routeRankCalc = (type, rank) => {
-  if (type === "french") return frenchScale[rank];
-  else if (type === "kurtyka") return kurtykaScale[rank];
-  else if (type === "tatras") return tatrasScale[rank];
-  else if (type === "usa") return usaScale[rank];
-};
-
-export default routeRankCalc;
+ calculate : function(type, rank) {
+  if (type === "french") return this.scale.frenchScale[rank];
+  else if (type === "kurtyka") return this.scale.kurtykaScale[rank];
+  else if (type === "tatras") return this.scale.tatrasScale[rank];
+  else if (type === "usa") return this.scale.usaScale[rank];
+}
+}
+// console.log(Object.keys(scales.scales))
+// console.log(scales.calculate("french",13))
+export default scales;
