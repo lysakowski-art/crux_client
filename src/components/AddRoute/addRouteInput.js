@@ -28,6 +28,7 @@ const AddRouteInput = ({
             onChange={handleValue}
             rows={rows}
             as={as}
+            value={checkboxValue&&type==="number"? 1 : value}
           />
         </Form.Group>
       </Col>

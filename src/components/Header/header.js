@@ -20,7 +20,7 @@ const Header = ({lang,setLang}) => {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
-          <Button variant="dark" onClick={handleClick}>{lang ? "PL" : "EN"}</Button>
+          <Button variant="dark" onClick={handleClick}>{lang ? "EN" : "PL"}</Button>
         </Navbar.Collapse>
       </Navbar>
     </header>
