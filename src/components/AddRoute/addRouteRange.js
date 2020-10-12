@@ -8,7 +8,7 @@ const AddRouteRange = ({name, value, setValue, type,max, min}) => {
     const [scaleName, setScaleName] = useState("french");
     // options
     const scalesOptions = Object.keys(scales.scale).map((el,index)=><option key={index} value={el}>{el.toUpperCase()}</option>)
-    const rankOptions = scales.scale[scaleName].map((el,index)=><option key={index} value={index}>{el}</option>)
+    const rankOptions = scales.scale[scaleName].map((el,index)=>(el!== null ? <option key={index} value={index}>{el}</option>:null))
 
 
     //handle
@@ -16,7 +16,7 @@ const AddRouteRange = ({name, value, setValue, type,max, min}) => {
       setScaleName(e.target.value)
     }
     const handleRange = (e) => {
-        setValue(e.target.value)
+        setValue(parseInt(e.target.value))
     }
 
     return ( 

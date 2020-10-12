@@ -3,14 +3,14 @@ import {Form,Row} from 'react-bootstrap'
 import AddRouteInput from "./addRouteInput"
 import AddRouteRange from './addRouteRange';
 import AddRegion from './addRegion';
-import AddRouteRadio from './addRouteRadio'
+import SubmitForm from './submitForm'
 
 const AddRoute = () => {
   const [data, setData] = useState({})
   // data
   const [routeTitle, setRouteTitle] = useState("");
   const [routeAuthor,setRouteAuthor] = useState("");
-  const [routeRank,setRouteRank] = useState("");
+  const [routeRank,setRouteRank] = useState(0);
   const [routeType, setRouteType] = useState(true);
   const [region, setRegion] = useState("");
   // const [route_img] = useState("");
@@ -18,8 +18,7 @@ const AddRoute = () => {
   const [routeDescription, setRouteDescription] = useState("");
   // const [added_by] = useState("");
   // const [location, setLocation] = useState("");
-  
-  const routeTypes=["Sportowa", "Trad"]
+
   
   useEffect(()=>{
     setData({
@@ -36,17 +35,16 @@ const AddRoute = () => {
     })
   },[routeTitle,routeAuthor,routeRank,routeType,region,placemantAndBelayAnchor,routeDescription])
 
-  console.log(data)
   return(
     <Row className="add_route justify-content-md-center">
       <Form>
         <AddRouteInput name="Title" type="text" value={routeTitle} setValue={setRouteTitle}/>
         <AddRouteInput name="Author" type="text" value={routeAuthor} setValue={setRouteAuthor}/>
-        <AddRouteRadio name="Type" type="checkbox" routeTypes={routeTypes} value={routeType} setValue={setRouteType}/>
         <AddRouteRange name="Route's Rank" type="select" value={routeRank} setValue={setRouteRank} max={33} min={1}/>
-        <AddRegion name="Region" type="text" value={region} setValue={setRegion}/>
-        <AddRouteInput name="Placemant" type="number" value={placemantAndBelayAnchor} setValue={setPlacemantAndBelayAnchor}/>
-        <AddRouteInput name="Route Description" type="textarea" value={routeDescription} setValue={setRouteDescription} rows={3}/>
+        <AddRegion name="Region" as="select" value={region} setValue={setRegion}/>
+        <AddRouteInput name="Placemant" type="number" value={placemantAndBelayAnchor} setValue={setPlacemantAndBelayAnchor} checkbox={true} checkboxValue={routeType} setCheckboxValue={setRouteType}/>
+        <AddRouteInput name="Route Description" as="textarea" value={routeDescription} setValue={setRouteDescription} rows={4}/>
+        <SubmitForm name="Submit" type="submit" data={data} variant="dark"/>
       </Form>
     </Row>
   ) 
