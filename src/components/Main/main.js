@@ -11,7 +11,7 @@ import NotFound from "../NotFound";
 
 const Main = ({ lang }) => {
   return (
-    <Container className="container">
+    <Container className="container main">
       <Row className="justify-content-md-center">
         <Col xs="1"/>
         <Col xs="10">

@@ -1,5 +1,8 @@
 .wrapper {
   min-height: calc(100vh - 50px);
+  .main{
+    padding: 2rem 0;
+  }
 }
 .footer {
   height: 50px;
