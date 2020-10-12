@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
+import { ListGroup } from "react-bootstrap";
 
-const RoutesList = () => {
-    return ( 
-        <div className="routes_list">
-            <ul>
+const RoutesList = ({ routes }) => {
+  return (
+    
+    <ListGroup variant="flush">
+        {routes.map(el=><ListGroup.Item key={el._id}>{el.route_title}</ListGroup.Item>)}
+    </ListGroup>
+  );
+};
 
-            </ul>
-        </div>
-     );
-}
- 
 export default RoutesList;

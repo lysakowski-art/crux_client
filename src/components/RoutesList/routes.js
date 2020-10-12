@@ -24,7 +24,8 @@ const Routes = () => {
           console.log(err)
         })
   }
-  console.log(routes)
+
+  // tutaj trzeba poustalać co się sypie, że cały czase renderuje mi się pełna lista
   useEffect(() => {
     if(routes.length === 0 && region === "random" && routeRank === 0){
       getRouteWithConditions(null,null,allRoutesUri)
