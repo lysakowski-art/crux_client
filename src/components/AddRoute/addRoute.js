@@ -38,13 +38,13 @@ const AddRoute = () => {
   return(
     <Row className="add_route justify-content-md-center">
       <Form>
-        <AddRouteInput name="Title" type="text" value={routeTitle} setValue={setRouteTitle}/>
-        <AddRouteInput name="Author" type="text" value={routeAuthor} setValue={setRouteAuthor}/>
-        <AddRouteRange name="Route's Rank" type="select" value={routeRank} setValue={setRouteRank} max={33} min={1}/>
-        <AddRegion name="Region" as="select" value={region} setValue={setRegion}/>
-        <AddRouteInput name="Placemant" type="number" value={placemantAndBelayAnchor} setValue={setPlacemantAndBelayAnchor} checkbox={true} checkboxValue={routeType} setCheckboxValue={setRouteType}/>
-        <AddRouteInput name="Route Description" as="textarea" value={routeDescription} setValue={setRouteDescription} rows={4}/>
-        <SubmitForm name="Submit" type="submit" data={data} variant="dark"/>
+        <AddRouteInput name="title" type="text" value={routeTitle} setValue={setRouteTitle}/>
+        <AddRouteInput name="author" type="text" value={routeAuthor} setValue={setRouteAuthor}/>
+        <AddRouteRange name="route's_rank" subName="route's_scale" type="select" value={routeRank} setValue={setRouteRank} max={33} min={1}/>
+        <AddRegion name="region" as="select" value={region} setValue={setRegion}/>
+        <AddRouteInput name="expansion_bolts/placemant" type="number" value={placemantAndBelayAnchor} setValue={setPlacemantAndBelayAnchor} checkbox={true} checkboxValue={routeType} setCheckboxValue={setRouteType}/>
+        <AddRouteInput name="route_description" as="textarea" value={routeDescription} setValue={setRouteDescription} rows={4}/>
+        <SubmitForm name="submit" type="submit" data={data} variant="dark"/>
       </Form>
     </Row>
   ) 

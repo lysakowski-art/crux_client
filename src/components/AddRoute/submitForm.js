@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import axios from 'axios';
+import {useTranslation} from 'react-i18next'
+
 
 const SubmitForm = ({ type, name, variant, data }) => {
-
+  const {i18n, t}=useTranslation();
   const URI = "http://127.0.0.1:8000/routes/"
   const handleSubmit=(e)=>{
     e.preventDefault();
@@ -20,7 +22,7 @@ const SubmitForm = ({ type, name, variant, data }) => {
 
   return (
     <Button variant={variant} type={type} onClick={handleSubmit}>
-     {name}
+     {t(name)}
     </Button>
   );
 };

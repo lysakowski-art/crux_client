@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Col } from "react-bootstrap";
 import RouteCheckbox from "./routeCheckbox";
-
+import {useTranslation} from 'react-i18next'
 const AddRouteInput = ({
   name,
   value,
@@ -16,15 +16,16 @@ const AddRouteInput = ({
   const handleValue = (e) => {
     setValue(e.target.value);
   };
+  const {i18n, t}=useTranslation();
 
   return (
     <Form.Row>
       <Col md={type === "number" ? 9 : 12}>
-        <Form.Group controlId="exampleForm.ControlInput1">
-          <Form.Label>{name}</Form.Label>
+        <Form.Group>
+          <Form.Label>{t(name)}</Form.Label>
           <Form.Control
             type={type}
-            placeholder={name}
+            placeholder={t(name)}
             onChange={handleValue}
             rows={rows}
             as={as}

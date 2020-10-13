@@ -1,9 +1,11 @@
 import React,{useState} from 'react';
 import {Form, Col} from 'react-bootstrap';
 import scales from '../_common/scales'
+import {useTranslation} from 'react-i18next'
 
 
-const AddRouteRange = ({name, value, setValue, type,max, min}) => {
+const AddRouteRange = ({name, subName, value, setValue, type,max, min}) => {
+    const {i18n, t}=useTranslation();
     //states
     const [scaleName, setScaleName] = useState("french");
     // options
@@ -22,13 +24,13 @@ const AddRouteRange = ({name, value, setValue, type,max, min}) => {
     return ( 
       <Form.Row>
         <Col md={6}>
-        <Form.Label>Rank's type</Form.Label>
+        <Form.Label>{t(subName)}</Form.Label>
         <Form.Control as="select" onChange={handleNameSelect}>
           {scalesOptions}
         </Form.Control>
         </Col>
         <Col md={6}>
-        <Form.Label>Rank</Form.Label>
+        <Form.Label>{t(name)}</Form.Label>
         <Form.Control as={type} onChange={handleRange}>
           {rankOptions}
         </Form.Control>

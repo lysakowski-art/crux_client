@@ -1,0 +1,16 @@
+{
+    "lng": "en",
+    "add_route": "Dodaj Drogę",
+    "routes": "Drogi Wspinaczkowe",
+    "about": "O mnie",
+    "contact": "Kontakt",
+    "title": "Nazwa drogi",
+    "author": "Autor",
+    "route's_rank": "Poziom drogi",
+    "route's_scale": "Skala",
+    "region": "Region",
+    "expansion_bolts/placemant": "Ile punktów asekuracyjnych (łącznie z stanowiskiem)?",
+    "route_description": "Route's Description",
+    "submit": "Wyślij",
+    "sport": "Sportowa"
+}

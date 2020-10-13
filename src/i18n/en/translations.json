@@ -1,0 +1,16 @@
+{
+    "lng": "pl",
+    "add_route": "Add Route",
+    "routes": "Routes",
+    "about": "About",
+    "contact": "Contact",
+    "title": "Title",
+    "author": "Author",
+    "route's_rank": "Route's Rank",
+    "route's_scale": "Route's Scale",
+    "region": "Region",
+    "expansion_bolts/placemant": "How many expansion bolts with placemant are settled?",
+    "route_description": "Route's Description",
+    "submit": "Submit",
+    "sport": "With bolts?"
+}

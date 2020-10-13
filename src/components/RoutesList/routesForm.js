@@ -6,9 +6,9 @@ import SubmitConditions from "./submitConditions"
 
 const RoutesForm = ({ setRouteRank, routeRank, setRegion, region, routes, setRoutes}) => {
   return (
-    <Form>
-        <AddRouteRange name="Route's Rank" type="select" value={routeRank} setValue={setRouteRank} max={33} min={1}/>
-        <AddRegion name="Region" as="select" value={region} setValue={setRegion}/>
+    <Form>  
+        <AddRouteRange name="route's_rank" subName="route's_scale" type="select" value={routeRank} setValue={setRouteRank} max={33} min={1}/>
+        <AddRegion name="region" as="select" value={region} setValue={setRegion}/>
         <SubmitConditions name="Submit" variant="dark" routeRank={routeRank} region={region} setRoutes={setRoutes} routes={routes}/>  
     </Form>
   );
