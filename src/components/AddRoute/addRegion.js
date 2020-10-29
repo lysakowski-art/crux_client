@@ -15,7 +15,6 @@ const AddRegion = ({as, value, setValue, name}) => {
           .then((res) => {
             if (res.status === 200) {
               if (Object.entries(allRegions).length === 0) {
-
                 setAllRegions(res.data);
               }
             }

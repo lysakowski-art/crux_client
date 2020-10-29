@@ -11,6 +11,7 @@ const Header = ({lang,setLang}) => {
 
   const changeLanguage = () => {
         i18n.changeLanguage(i18n.language === "pl" ? "en" : "pl");
+        setLang(!lang)
     };
   return (
     <header>
@@ -19,7 +20,7 @@ const Header = ({lang,setLang}) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/">{t("home")}</Nav.Link>
             <Nav.Link href="/add_route">{t("add_route")}</Nav.Link>
             <Nav.Link href="/routes">{t("routes")}</Nav.Link>
             <Nav.Link href="/about">{t("about")}</Nav.Link>
