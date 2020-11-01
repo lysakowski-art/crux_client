@@ -13,5 +13,9 @@
     "expansion_bolts/placemant": "How many expansion bolts with placemant are settled?",
     "route_description": "Route's Description",
     "submit": "Submit",
-    "sport": "With bolts?"
+    "sport": "With bolts?",
+    "email": "Email",
+    "password": "Password",
+    "nickname": "Nick",
+    "greeting": "Greeting's"
 }

@@ -13,5 +13,9 @@
     "expansion_bolts/placemant": "Ile punktów asekuracyjnych (łącznie z stanowiskiem)?",
     "route_description": "Route's Description",
     "submit": "Wyślij",
-    "sport": "Sportowa"
+    "sport": "Sportowa",
+    "email": "Email",
+    "password": "Hasło",
+    "nickname": "Nickname",
+    "greeting": "Witaj"
 }
