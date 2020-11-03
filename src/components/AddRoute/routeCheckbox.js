@@ -4,7 +4,7 @@ import {useTranslation} from 'react-i18next'
 
 
 const RouteCheckbox = ({ name, value, routeTypes, setValue, type }) => {
-  const { i18n, t} = useTranslation();
+  const {t} = useTranslation();
 
   const handleCheck = (e) => {
     setValue(!value);

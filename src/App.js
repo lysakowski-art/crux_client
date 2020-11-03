@@ -13,24 +13,24 @@ const App = () => {
   const [loggedIn, setLoggedIn] = useState(false)
   const [userName, setUserName] = useState("");
   const [cookieStatus, setCookieStatus] = useState({});
-
   const URI = "http://127.0.0.1:8000/check_session";
+
 
   useEffect(() => {
     axios
       .get(URI, { withCredentials: true })
       .then((res) => {
-        console.log(res);
-        // if (res.status === 200) {
-        //   if (Object.entries(cookieStatus).length === 0) {
-        //     if (res.data.loggedIn === true) {
-        //       setCookieStatus(res.data);
-        //       setLoggedIn(true);
-        //     }
-        //   }
-        // } else if (res.status === 404) {
-        //   console.log("No session");
-        // }
+        if (res.status === 200) {
+          if (Object.entries(cookieStatus).length === 0) {
+            if (res.data.loggedIn === true) {
+              setLoggedIn(res.data.loggedIn);
+              setUserName(res.data.user_name);
+              setCookieStatus(res.data)
+            }
+          }
+        } else if (res.status === 400) {
+          console.log(res.message);
+        }
       })
       .catch((error) => console.log(error));
   }, [cookieStatus]);

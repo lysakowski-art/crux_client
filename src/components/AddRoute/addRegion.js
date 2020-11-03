@@ -7,7 +7,7 @@ import {useTranslation} from 'react-i18next'
 
 const AddRegion = ({as, value, setValue, name}) => {
     const [allRegions, setAllRegions] = useState([]);
-    const {i18n, t}=useTranslation();
+    const {t}=useTranslation();
     const URI = `http://127.0.0.1:8000/regions`;
     useEffect(() => {
         axios
@@ -22,7 +22,7 @@ const AddRegion = ({as, value, setValue, name}) => {
           .catch((error) => {
             console.log(error);
           });
-      }, [allRegions]);
+      }, [allRegions,URI]);
     const sortedRegions = allRegions.sort((a,b)=>(
         a.group_of_regions > b.group_of_regions ? 1 : -1
     ))

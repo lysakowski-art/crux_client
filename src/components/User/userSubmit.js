@@ -8,7 +8,7 @@ const UserSubmit = ({loginData, content,endpoint,setLoggedIn,setUserName}) => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         axios
-          .post(URI,loginData)
+          .post(URI,loginData, { withCredentials: true })
           .then(res=>{
               if(res.status === 201){
                   setLoggedIn(true)

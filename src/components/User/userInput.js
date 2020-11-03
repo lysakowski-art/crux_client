@@ -2,7 +2,7 @@ import React from 'react';
 import {  Form } from "react-bootstrap";
 
 
-const UserInput = ({placeholder,label, setValue}) => {
+const UserInput = ({placeholder,label, setValue,type}) => {
     const handleValue = (e) => {
         setValue(e.target.value);
       };
@@ -10,7 +10,7 @@ const UserInput = ({placeholder,label, setValue}) => {
         <>
             <Form.Group>
                 {label ? <Form.Label>{label}</Form.Label> : null}
-                <Form.Control placeholder={placeholder} onChange={handleValue}/>
+                <Form.Control placeholder={placeholder} type={type} onChange={handleValue}/>
             </Form.Group>
         </>
      );

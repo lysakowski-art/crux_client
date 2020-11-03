@@ -17,5 +17,7 @@
     "email": "Email",
     "password": "Password",
     "nickname": "Nick",
-    "greeting": "Greeting's"
+    "greeting": "Greeting's",
+    "login": "Log in",
+    "logout": "Log out"
 }

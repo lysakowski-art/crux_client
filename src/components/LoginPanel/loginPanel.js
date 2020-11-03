@@ -3,6 +3,7 @@ import {  Form, Col  } from "react-bootstrap"
 import UserInput from '../User/userInput';
 import UserSubmit from '../User/userSubmit'
 import {useTranslation} from "react-i18next";
+import "./_loginPanel.scss";
 
 
 
@@ -16,20 +17,20 @@ const LoginPanel = ({setLoggedIn,setUserName}) => {
         "password": password
       })
     },[email_adress, password])
-    const {i18n, t} = useTranslation();
+    const {t} = useTranslation();
 
     return ( 
         <>
-            <Form>
+            <Form className="login_panel">
                 <Form.Row>
                   <Col>
                     <UserInput placeholder={t("email")} setValue={setEmail_adress} label={false}/>
                   </Col>
                   <Col>
-                    <UserInput placeholder={t("password")}  setValue={setPassword} label={false}/>
+                    <UserInput placeholder={t("password")} type="password"  setValue={setPassword} label={false}/>
                   </Col>
                   <Col>
-                    <UserSubmit content={t("submit")} setLoggedIn={setLoggedIn} setUserName={setUserName} endpoint="auth" loginData={loginData}/>
+                    <UserSubmit content={t("login")} setLoggedIn={setLoggedIn} setUserName={setUserName} endpoint="auth" loginData={loginData}/>
                   </Col>
                 </Form.Row>
             </Form>

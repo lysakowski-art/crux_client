@@ -17,5 +17,7 @@
     "email": "Email",
     "password": "Hasło",
     "nickname": "Nickname",
-    "greeting": "Witaj"
+    "greeting": "Witaj",
+    "login": "Zaloguj",
+    "logout": "Wyloguj"
 }
