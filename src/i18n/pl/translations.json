@@ -16,8 +16,9 @@
     "sport": "Sportowa",
     "email": "Email",
     "password": "Hasło",
-    "nickname": "Nickname",
+    "nickname": "Nick",
     "greeting": "Witaj",
     "login": "Zaloguj",
-    "logout": "Wyloguj"
+    "logout": "Wyloguj",
+    "sign": "Podaj"
 }
