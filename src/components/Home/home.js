@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Page from "../_common/getPage";
 import {ParallaxBanner} from 'react-scroll-parallax'
-const Home = ({ lang }) => {
+import {GlobalContext} from '../Context/globalProvider'
+const Home = () => {
+  const {lang} = useContext(GlobalContext)
   const homePL = "5f8c773dedb30b0648691632";
   const homeEN = "5f8c7772edb30b0648691633";
   const bannerImage = {
@@ -16,7 +18,7 @@ const Home = ({ lang }) => {
       <ParallaxBanner layers={[bannerImage]} style={bannerStyle}>
         <h1>Crux of Poland</h1>
       </ParallaxBanner>
-      <Page pageId={lang ?  homePL : homeEN} />
+      <Page pageId={lang ?  homePL : homeEN}/>
     </div>
   );
 };

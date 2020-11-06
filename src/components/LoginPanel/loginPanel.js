@@ -1,13 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {  Form, Col  } from "react-bootstrap"
 import UserInput from '../User/userInput';
 import UserSubmit from '../User/userSubmit'
 import {useTranslation} from "react-i18next";
 import "./_loginPanel.scss";
 
-
-
-const LoginPanel = ({setLoggedIn,setUserName}) => {
+const LoginPanel = () => {
     const [email_adress, setEmail_adress] = useState("")
     const [password, setPassword] = useState("")
     const [loginData, setLoginData] = useState({})
@@ -30,7 +28,7 @@ const LoginPanel = ({setLoggedIn,setUserName}) => {
                     <UserInput placeholder={t("password")} type="password"  setValue={setPassword} label={false}/>
                   </Col>
                   <Col>
-                    <UserSubmit content={t("login")} setLoggedIn={setLoggedIn} setUserName={setUserName} endpoint="auth" loginData={loginData}/>
+                    <UserSubmit content={t("login")} endpoint="auth" loginData={loginData}/>
                   </Col>
                 </Form.Row>
             </Form>

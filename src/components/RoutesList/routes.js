@@ -4,12 +4,9 @@ import RoutesList from "./routesList";
 
 
 const Routes = () => {
-  // states
   const [region, setRegion] = useState("random");
   const [routeRank, setRouteRank] = useState(0);
   const [routes, setRoutes] = useState([])
-  // URIs
-  console.log(routes);
 
   return (
     <div className="routes_cnt">

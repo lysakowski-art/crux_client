@@ -1,13 +1,15 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import {Form,Row} from 'react-bootstrap'
 import AddRouteInput from "./addRouteInput"
 import AddRouteRange from './addRouteRange';
 import AddRegion from './addRegion';
 import SubmitForm from './submitForm'
-import NotLoggedIn from "./notLoggedIn"
+// import NotLoggedIn from "./notLoggedIn"
+import {GlobalContext} from "../Context/globalProvider"
 
 
 const AddRoute = () => {
+  const {loggedIn} =useContext(GlobalContext)
   const [data, setData] = useState({})
   // data
   const [routeTitle, setRouteTitle] = useState("");

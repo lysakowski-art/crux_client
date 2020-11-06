@@ -9,35 +9,35 @@ import About from "../About";
 import Contact from "../Contact";
 import NotFound from "../NotFound";
 
-const Main = ({ lang }) => {
+const Main = () => {
   return (
     <Container className="container main">
       <Row className="justify-content-md-center">
         <Col xs="1"/>
         <Col xs="10">
           <Switch>
-            <Route exact path="/" component={() => <Home lang={lang} />} />
+            <Route exact path="/" component={() => <Home/>} />
             <Route
               exact
               path="/add_route"
-              component={() => <AddRoute lang={lang} />}
+              component={() => <AddRoute/>}
             />
             <Route
               exact
               path="/routes"
-              component={() => <Routes lang={lang} />}
+              component={() => <Routes/>}
             />
             <Route
               exact
               path="/about"
-              component={() => <About lang={lang} />}
+              component={() => <About/>}
             />
             <Route
               exact
               path="/contact"
-              component={() => <Contact lang={lang} />}
+              component={() => <Contact/>}
             />
-            <Route component={() => <NotFound lang={lang} />} />
+            <Route component={() => <NotFound/>} />
           </Switch>
         </Col>
         <Col xs="1"/>
