@@ -149,12 +149,11 @@ usa : [
 ]},
 
  calculate : function(type, rank) {
-  if (type === "french") return this.scale.frenchScale[rank];
-  else if (type === "kurtyka") return this.scale.kurtykaScale[rank];
-  else if (type === "tatras") return this.scale.tatrasScale[rank];
-  else if (type === "usa") return this.scale.usaScale[rank];
+  if (type === "french") return this.scale.french[rank];
+  else if (type === "kurtyka") return this.scale.kurtyka[rank];
+  else if (type === "tatras") return this.scale.tatras[rank];
+  else if (type === "usa") return this.scale.usa[rank];
 }
+
 }
-// console.log(Object.keys(scales.scales))
-// console.log(scales.calculate("french",13))
 export default scales;

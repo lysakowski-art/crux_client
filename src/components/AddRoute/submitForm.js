@@ -5,7 +5,7 @@ import {useTranslation} from 'react-i18next'
 
 
 const SubmitForm = ({ type, name, variant, data }) => {
-  const { t}=useTranslation();
+  const {t}=useTranslation();
   const URI = "http://127.0.0.1:8000/routes"
   const handleSubmit=(e)=>{
     e.preventDefault();
@@ -14,6 +14,7 @@ const SubmitForm = ({ type, name, variant, data }) => {
       .post(URI,data)
       .then(res=>{
         console.log(res)
+        alert(res.data.message)
       })
       .catch(error=>{
         console.log(error)

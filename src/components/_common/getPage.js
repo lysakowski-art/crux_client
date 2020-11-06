@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import {GlobalContext} from "../Context/globalProvider"
-import { useContext } from "react";
+import axios from "axios"
 
 const Page = ({ pageId }) => {
-  const {setLoading} = useContext(GlobalContext)
   const [page, setPage] = useState({});
+  const [loading, setLoading] = useState(true)
+
   const url = `http://127.0.0.1:8000/pages/${pageId}`;
   useEffect(() => {
     axios

@@ -26,7 +26,7 @@ const LogoutPanel = ({endpoint,content}) => {
         <Row className="login_panel" md>
                     <Col className="greetings">{t('greeting')} {userName}!</Col>
                     <Col>
-                        <Button variant="dark" onClick={handleSubmit}>
+                        <Button variant="danger" onClick={handleSubmit}>
                             {content}
                         </Button>
                     </Col>

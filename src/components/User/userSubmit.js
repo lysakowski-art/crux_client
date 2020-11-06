@@ -1,11 +1,12 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import axios from 'axios'
 import { Button } from "react-bootstrap";
 import {GlobalContext} from "../Context/globalProvider"
 
 
-const UserSubmit = ({loginData, content,endpoint}) => {
-    const {setLoggedIn,setUserName, setLoading} = useContext(GlobalContext)
+const UserSubmit = ({variant,loginData, content,endpoint}) => {
+    const {setLoggedIn,setUserName} = useContext(GlobalContext)
+    const [loading, setLoading] = useState(true)
     const URI = `http://127.0.0.1:8000/${endpoint}`
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -23,7 +24,7 @@ const UserSubmit = ({loginData, content,endpoint}) => {
           })
       }
     return ( 
-        <Button variant="dark" onClick={handleSubmit}>
+        <Button variant={variant} onClick={handleSubmit}>
             {content}
         </Button >
     );

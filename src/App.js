@@ -12,8 +12,9 @@ import {GlobalContext} from "./components/Context/globalProvider"
 
 const App = () => {
   const [cookieStatus, setCookieStatus] = useState({});
+  const [loading, setLoading] = useState(true)
   const url = "http://127.0.0.1:8000/check_session";
-  const {setLoggedIn, loading, setLoading, setUserName} = useContext(GlobalContext)
+  const {setLoggedIn, setUserName} = useContext(GlobalContext)
   useEffect(() => {
     axios
       .get(url, { withCredentials: true })
@@ -38,7 +39,7 @@ const App = () => {
       });
   }, []);
 
-  return loading ?  <Spinner animation="grow" variant="dark" size="xl"/>
+  return loading ?  <div className="loading"><Spinner animation="grow" variant="dark" size="xl"/></div>
 :  (
       <Router>
         <div className="wrapper">

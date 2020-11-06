@@ -1,4 +1,4 @@
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import {useTranslation} from "react-i18next";
 import LoginPanel from "../LoginPanel";
@@ -9,6 +9,8 @@ import "./_headers.scss"
 const Header = ({setLoggedIn, userName, setUserName, setLoading}) => {
   const {lang, setLang, loggedIn} = useContext(GlobalContext)
   const {i18n,t} = useTranslation();
+  const [show, setShow] = useState(false);
+
   const changeLanguage = () => {
         i18n.changeLanguage(i18n.language === "pl" ? "en" : "pl");
         setLang(!lang)
@@ -28,7 +30,7 @@ const Header = ({setLoggedIn, userName, setUserName, setLoading}) => {
             <Nav.Link href="/contact">{t("contact")}</Nav.Link>
           </Nav>
         
-          {loggedIn ? <LogoutPanel endpoint="auth" content={t("logout")}/> : (<LoginPanel/>)}
+          {loggedIn ? <LogoutPanel endpoint="auth" content={t("logout")}/> : (<LoginPanel setShow={setShow} show={show}/>)}
           <Button variant="dark" onClick={changeLanguage}>{t("lng").toUpperCase()}</Button>
         </Navbar.Collapse>
       </Navbar>

@@ -7,6 +7,7 @@ import {useTranslation} from 'react-i18next'
 
 const AddRegion = ({as, value, setValue, name}) => {
     const [allRegions, setAllRegions] = useState([]);
+    const [loading, setLoading] = useState(true)
     const {t}=useTranslation();
     const URI = `http://127.0.0.1:8000/regions`;
     useEffect(() => {
@@ -16,13 +17,15 @@ const AddRegion = ({as, value, setValue, name}) => {
             if (res.status === 200) {
               if (Object.entries(allRegions).length === 0) {
                 setAllRegions(res.data);
+                setLoading(false)
               }
             }
           })
           .catch((error) => {
             console.log(error);
+            setLoading(false)
           });
-      }, [allRegions,URI]);
+      }, []);
     const sortedRegions = allRegions.sort((a,b)=>(
         a.group_of_regions > b.group_of_regions ? 1 : -1
     ))
