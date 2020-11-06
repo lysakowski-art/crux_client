@@ -17,10 +17,17 @@ const UserSubmit = ({variant,loginData, content,endpoint}) => {
                   setLoggedIn(true)
                   setUserName(res.data.user_name)
                   setLoading(false)
-              }
+              } else if (res.status === 404){
+                  alert(res.data.message)
+              } else if (res.status === 409){
+                  alert(res.data.message)
+              } else if (res.status === 400){
+                alert(res.data.message)
+            }
           })
           .catch(error=>{
             console.log(error)
+            
           })
       }
     return ( 

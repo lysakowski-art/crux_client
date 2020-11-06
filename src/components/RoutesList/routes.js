@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import RoutesForm from "./routesForm";
 import RoutesList from "./routesList";
-import scales from '../_common/scales'
-
 
 const Routes = () => {
   const [region, setRegion] = useState("random");

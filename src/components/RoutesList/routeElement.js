@@ -9,7 +9,7 @@ const RouteElement = (props) => {
     return ( 
         <ListGroup.Item key={_id}>
             <Card>
-                <Card.Header><strong>{route_title}</strong>{route_title}</Card.Header>
+                <Card.Header><strong>{route_title}</strong></Card.Header>
                 <Card.Body>
                 <blockquote className="blockquote mb-0">
                   <ul>

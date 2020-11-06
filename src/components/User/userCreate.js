@@ -13,6 +13,10 @@ const UserCreate = ({registerData, handleClose, content, endpoint}) => {
             if(res.status === 201){
               console.log(res.data.message);
               alert(res.data.message)
+            } else if(res.status === 400){
+              alert(res.data.message)
+            } else if(res.status ===500){
+              alert(res.data.message)
             }
         }).then(()=>{
           handleClose()

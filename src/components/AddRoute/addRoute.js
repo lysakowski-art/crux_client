@@ -14,7 +14,7 @@ const AddRoute = () => {
   const [routeAuthor,setRouteAuthor] = useState("");
   const [routeRank,setRouteRank] = useState(0);
   const [routeType, setRouteType] = useState(true);
-  const [region, setRegion] = useState("");
+  const [region, setRegion] = useState("5f7afd3e4845fd5b1dfff1c7");
   const [placemantAndBelayAnchor, setPlacemantAndBelayAnchor] = useState(1);
   const [routeDescription, setRouteDescription] = useState("");
   
