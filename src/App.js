@@ -14,7 +14,7 @@ const App = () => {
   const [cookieStatus, setCookieStatus] = useState({});
   const [loading, setLoading] = useState(true)
   const url = "http://127.0.0.1:8000/check_session";
-  const {setLoggedIn, setUserName} = useContext(GlobalContext)
+  const {setLoggedIn, setUserName, responseMessage, showInfo} = useContext(GlobalContext)
   useEffect(() => {
     axios
       .get(url, { withCredentials: true })

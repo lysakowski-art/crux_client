@@ -8,7 +8,7 @@ const NotLoggedIn = () => {
     return ( 
         <div className="not-logged-in">
             <Card className="text-center">
-                <Card.Header>{t("attention")}</Card.Header>
+                <Card.Header><strong style={{color:"red"}}>{t("attention")}</strong></Card.Header>
                 <Card.Body>
                 <Card.Title>{t("for the insiders")}</Card.Title>
                   <Card.Text>

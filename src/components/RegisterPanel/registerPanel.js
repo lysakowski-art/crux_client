@@ -39,12 +39,12 @@ const RegisterPanel = ({show, setShow,setResponseMessage,setShowResponse}) => {
                     <Form.Row>
                         <UserInput placeholder={t("password")} type="password"  setValue={setPassword} label={t("password")}/>
                     </Form.Row>
-                    <Form.Row>
-                        <UserCreate content={t("register")} endpoint="create_user" registerData={registerData} handleClose={handleClose} setResponseMessage={setResponseMessage} setShowResponse={setShowResponse}/>
+                    <Form.Row style={{marginTop: "2em"}}>
+                        <UserCreate  content={t("register")} endpoint="create_user" registerData={registerData} handleClose={handleClose} setResponseMessage={setResponseMessage} setShowResponse={setShowResponse}/>
                     </Form.Row>
                  </Form>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer style={{justifyContent: "center"}}>
                 {t("glad to see you are joining to comunity")}
             </Modal.Footer>
         </Modal>

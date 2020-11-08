@@ -31,7 +31,7 @@ const Header = ({setLoggedIn, userName, setUserName, setLoading}) => {
           </Nav>
         
           {loggedIn ? <LogoutPanel endpoint="auth" content={t("logout")}/> : (<LoginPanel setShow={setShow} show={show}/>)}
-          <Button variant="dark" onClick={changeLanguage}>{t("lng").toUpperCase()}</Button>
+          <Button variant="secondary" onClick={changeLanguage}>{t("lng").toUpperCase()}</Button>
         </Navbar.Collapse>
       </Navbar>
     </header>
