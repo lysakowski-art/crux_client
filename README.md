@@ -34,9 +34,11 @@ Node.js v 12.16.1 or higher
 ### Steps
 1. `git clone https://github.com/lysakowski-art/crux_client.git`
 
-2. `cd crux_client && npm i`
+2. `cd crux_client`
 
-3. `npm start`
+3. `npm i`
+
+4. `npm start`
 
 ## License 
 
