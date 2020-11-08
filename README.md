@@ -37,3 +37,7 @@ Node.js v 12.16.1 or upper
 2. `npm i`
 
 3. `npm start`
+
+## License 
+
+[MIT](https://opensource.org/licenses/MIT)
