@@ -27,7 +27,7 @@ in progress...
 
 ## Requirements
 
-Node.js v 12.16.1 or upper
+Node.js v 12.16.1 or higher
 
 ## How to run?
 
