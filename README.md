@@ -40,6 +40,8 @@ Node.js v 12.16.1 or higher
 
 4. `npm start`
 
+**Have to run on  127.0.0.1:3000!**
+
 ## License 
 
 [MIT](https://opensource.org/licenses/MIT)
