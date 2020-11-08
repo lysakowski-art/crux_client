@@ -4,7 +4,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Purpose
-Crux of Poland app is to enable the recording and organization of polish climbing routes by the members of comunity.
+Crux of Poland app enables to the recording and organization of polish climbing routes by the members of comunity.
 
 ### Features
 
