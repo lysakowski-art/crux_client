@@ -1,14 +1,48 @@
 .wrapper {
   min-height: calc(100vh - 50px);
+  overflow: hidden;
+
   .main{
-    padding: 2rem 0;
+    // max-width: 100%;
+    margin-top: 2rem;
+    max-width: 80%;
+    color: #fff;
+    .main-row{
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .main::after{
+    z-index: -11;
+    content: "";
+    position: absolute;
+    background-image: url("./images/banner.jpg");
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .main::before{
+    z-index: -10;
+    content: "";
+    position: absolute;
+    background-color: #00000020;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 .footer {
   height: 50px;
 }
 .loading{
-  height: 100%;
+  height: calc(100vh - 130px);
   width: 100%;
   display: flex;
   justify-content: center;

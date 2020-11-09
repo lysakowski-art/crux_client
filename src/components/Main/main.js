@@ -11,36 +11,32 @@ import NotFound from "../NotFound";
 
 const Main = () => {
   return (
-    <Container className="container main">
-      <Row className="justify-content-md-center">
-        <Col xs="1"/>
-        <Col xs="10">
-          <Switch>
-            <Route exact path="/" component={() => <Home/>} />
-            <Route
-              exact
-              path="/add_route"
-              component={() => <AddRoute/>}
-            />
-            <Route
-              exact
-              path="/routes"
-              component={() => <Routes/>}
-            />
-            <Route
-              exact
-              path="/about"
-              component={() => <About/>}
-            />
-            <Route
-              exact
-              path="/contact"
-              component={() => <Contact/>}
-            />
-            <Route component={() => <NotFound/>} />
-          </Switch>
-        </Col>
-        <Col xs="1"/>
+    <Container className="container main" fluid>
+      <Row className="main-row">
+        <Switch>
+          <Route exact path="/" component={() => <Home/>} />
+          <Route
+            exact
+            path="/add_route"
+            component={() => <AddRoute/>}
+          />
+          <Route
+            exact
+            path="/routes"
+            component={() => <Routes/>}
+          />
+          <Route
+            exact
+            path="/about"
+            component={() => <About/>}
+          />
+          <Route
+            exact
+            path="/contact"
+            component={() => <Contact/>}
+          />
+          <Route component={() => <NotFound/>} />
+        </Switch>
       </Row>
     </Container>
   );

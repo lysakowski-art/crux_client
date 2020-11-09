@@ -1,0 +1,10 @@
+.routes-cnt{
+    margin: 0 auto;
+    background-color: #00000030;
+    padding: 2rem 3rem;
+}
+@media(max-width: 600px) {
+    .routes-cnt{
+        padding: 0.5rem;
+    }
+}

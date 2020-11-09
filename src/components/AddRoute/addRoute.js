@@ -6,7 +6,7 @@ import AddRegion from './addRegion';
 import SubmitForm from './submitForm'
 import NotLoggedIn from "./notLoggedIn"
 import {GlobalContext} from "../Context/globalProvider"
-
+import "./_addRoutes.scss"
 const AddRoute = () => {
   const {loggedIn, userName} =useContext(GlobalContext)
   const [data, setData] = useState({})
@@ -32,7 +32,7 @@ const AddRoute = () => {
   },[routeTitle,routeAuthor,routeRank,routeType,region,placemantAndBelayAnchor,routeDescription])
 
   return loggedIn ? (
-    <Row className="add_route justify-content-md-center">
+    <Row className="add-route justify-content-md-center">
       <Form>
         <AddRouteInput name="title" type="text" value={routeTitle} setValue={setRouteTitle}/>
         <AddRouteInput name="author" type="text" value={routeAuthor} setValue={setRouteAuthor}/>

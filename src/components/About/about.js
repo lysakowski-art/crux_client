@@ -7,9 +7,8 @@ const About = () => {
   const aboutEN = "5f8c7787edb30b0648691635";
   const aboutPL = "5f8c777fedb30b0648691634";
   return (
-    <div className="about">
+    <div className="page-container">
       <Page pageId={lang ?  aboutPL : aboutEN}/>
-      <RegisterPanel/>
     </div>
   );
 };
