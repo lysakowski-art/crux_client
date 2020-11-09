@@ -9,11 +9,8 @@ const Footer = () => {
       "width": "100%",
       "margin": "0"
     }}>
-      <Col xs lg={8} style={{color: "#ffffff80"}}>
+      <Col xs lg={12} style={{color: "#ffffff80"}}>
         Copyright Michał Łysakowski | License MIT
-      </Col>
-      <Col xs lg={4}>
-        {/* facebook i coś tam jeszcze */}
       </Col>
     </Row>
   );
