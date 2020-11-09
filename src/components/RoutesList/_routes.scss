@@ -2,6 +2,11 @@
     margin: 0 auto;
     background-color: #00000030;
     padding: 2rem 3rem;
+    overflow: visible;
+    .card-body,
+    .card-header{
+        color: #000
+    }
 }
 @media(max-width: 600px) {
     .routes-cnt{
