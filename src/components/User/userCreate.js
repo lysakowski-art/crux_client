@@ -4,11 +4,11 @@ import { Button } from "react-bootstrap";
 
 const UserCreate = ({registerData, handleClose, content, endpoint}) => {
 
-  const URI = `http://127.0.0.1:8000/${endpoint}`
+  const url = `http://127.0.0.1:8000/${endpoint}`
   const handleSubmit=(e)=>{
     e.preventDefault();
       axios
-        .post(URI, registerData, { withCredentials: true })
+        .post(url, registerData, { withCredentials: true })
         .then(res=>{
             if(res.status === 201){
               console.log(res.data.message);

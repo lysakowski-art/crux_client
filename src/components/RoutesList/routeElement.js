@@ -1,15 +1,22 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { ListGroup, Card } from "react-bootstrap";
 import {useTranslation} from 'react-i18next'
 import scales from '../_common/scales'
-
+import {GlobalContext} from "../Context/globalProvider"
+import DeleteRoute from "./deleteRoute"
 const RouteElement = (props) => {
     const{_id, route_title, user_name,route_author,route_rank,route_type,region,placemant_and_belay_anchor,route_description} = props.el
     const {t} =useTranslation()
+    const {userType} =useContext(GlobalContext)
+    console.log(userType)
+
     return ( 
         <ListGroup.Item key={_id}>
             <Card>
-                <Card.Header><strong>{route_title}</strong></Card.Header>
+                <Card.Header>
+                  <strong>{route_title}</strong>
+                  {userType === "admin" || userType === "moderator" ? <DeleteRoute _id={_id}/> : null}  
+                </Card.Header>
                 <Card.Body>
                 <blockquote className="blockquote mb-0">
                   <ul>

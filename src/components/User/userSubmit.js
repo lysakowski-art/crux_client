@@ -5,17 +5,19 @@ import {GlobalContext} from "../Context/globalProvider"
 
 
 const UserSubmit = ({variant,loginData, content,endpoint}) => {
-    const {setLoggedIn,setUserName} = useContext(GlobalContext)
+    const {setLoggedIn,setUserName, setUserType} = useContext(GlobalContext)
     const [loading, setLoading] = useState(true)
-    const URI = `http://127.0.0.1:8000/${endpoint}`
+    const url = `http://127.0.0.1:8000/${endpoint}`
     const handleSubmit=(e)=>{
         e.preventDefault();
         axios
-          .post(URI,loginData, { withCredentials: true })
+          .post(url,loginData, { withCredentials: true })
           .then(res=>{
               if(res.status === 201){
                   setLoggedIn(true)
                   setUserName(res.data.user_name)
+                  console.log(res.data.user_type)
+                  setUserType(res.data.user_type)
                   setLoading(false)
               } else if (res.status === 404){
                   alert(res.data.message)
