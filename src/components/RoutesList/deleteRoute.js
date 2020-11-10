@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from "react-bootstrap"
 import axios from "axios"
 
-const DeleteRoute = ({_id}) => {
+const DeleteRoute = ({_id,setRouteActive}) => {
     const url = `http://127.0.0.1:8000/routes/${_id}`
     const handleClick = (e) => {
         e.preventDefault()
@@ -10,6 +10,9 @@ const DeleteRoute = ({_id}) => {
             .delete(url, { withCredentials: true })
             .then(res=>{
                 alert(res.data.message)
+            })
+            .then(()=>{
+                setRouteActive(false)
             })
     }
     return ( 

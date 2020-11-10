@@ -5,7 +5,9 @@
     overflow: visible;
     .card-body,
     .card-header{
-        color: #000
+        color: #000;
+        display: flex;
+        justify-content: space-between;
     }
 }
 @media(max-width: 600px) {
