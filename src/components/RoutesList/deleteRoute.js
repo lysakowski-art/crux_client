@@ -16,7 +16,7 @@ const DeleteRoute = ({_id,setRouteActive}) => {
             })
     }
     return ( 
-        <Button onClick={handleClick}>
+        <Button variant="danger"onClick={handleClick}>
             X
         </Button>
      );
