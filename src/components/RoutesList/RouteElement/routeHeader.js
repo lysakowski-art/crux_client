@@ -3,13 +3,16 @@ import {Card} from "react-bootstrap"
 import {GlobalContext} from "../../Context/globalProvider"
 import {RouteContext} from "./routeContext"
 import DeleteRoute from "../deleteRoute"
+import RouteTextOutput from "./routeTextOutput"
 
 const RouteHeader = ({route_title, _id, setRouteActive}) => {
     const{userType} = useContext(GlobalContext)
-    const {routeTitle, setrouteTitle} = useContext(RouteContext)
+    const {routeTitle, setRouteTitle,id} = useContext(RouteContext)
     return ( 
         <Card.Header>
-              <strong>{routeTitle}</strong>
+              <strong>
+                <RouteTextOutput param="route_title" id={id}value={routeTitle} setValue={setRouteTitle} name={null}/>  
+              </strong>
               {userType === "admin" || userType === "moderator" ? <DeleteRoute _id={_id} setRouteActive={setRouteActive}/> : null}  
         </Card.Header>
      );

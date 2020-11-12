@@ -7,15 +7,16 @@ export const RouteProvider = (props) => {
     
     const [id, setId] = useState(_id);
     const [routeTitle, setRouteTitle] = useState(route_title)
-    // const [userName, setUserName] = useState(user_name);
+    const [userName, setUserName] = useState(user_name);
     const [routeAuthor, setRouteAuthor] = useState(route_author)
-    // const [routeRank, setRouteRank] =useState(route_rank)
-    // const [bolts, setBolts] = useState(placemant_and_belay_anchor)
-    // const [routeDescription, setRouteDescription] = useState(routeDescription)
+    const [routeRank, setRouteRank] =useState(route_rank)
+    const [bolts, setBolts] = useState(placemant_and_belay_anchor)
+    const [routeDescription, setRouteDescription] = useState(route_description)
+    const [routeType, setRouteType] = useState(route_type)
     // const [userId, setUserId] = useState(user_id)
     // const [active, setActive] = useState(active)
 return (
-    <RouteContext.Provider value={{id, setId, routeTitle, setRouteTitle,routeAuthor, setRouteAuthor}}>
+    <RouteContext.Provider value={{routeType, setRouteType,routeDescription, setRouteDescription,bolts, setBolts,routeRank, setRouteRank,userName, setUserName,id, setId, routeTitle, setRouteTitle,routeAuthor, setRouteAuthor}}>
         {props.children}
     </RouteContext.Provider>
     )

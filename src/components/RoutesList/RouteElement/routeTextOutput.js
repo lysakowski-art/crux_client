@@ -5,7 +5,7 @@ import {useTranslation} from "react-i18next"
 import axios from 'axios';
 // import { useEffect } from 'react';
 
-const RouteAuthor = ({name, value, setValue, id, param}) => {
+const RouteTextOutput = ({name, value, setValue, id, param}) => {
     const [prevValue, setPrevValue] = useState(value)
     const [editable, setEditable] = useState(false)
     const [data, setData] = useState({})
@@ -67,7 +67,7 @@ const RouteAuthor = ({name, value, setValue, id, param}) => {
         editable ? (
             <li onDoubleClick={handleDoubleClick}>
                 <div>
-                {name}:
+                {name ? `${name}:`: null}
                 <input type="text" value={value} style={{border: "none", borderBottom: "1px solid #000"}} onChange={handleChange}/>
                 <Button variant="light" onClick={handleConfirm}>
                     {t('confirm')}
@@ -80,11 +80,11 @@ const RouteAuthor = ({name, value, setValue, id, param}) => {
         ) : (
         <li onDoubleClick={handleDoubleClick}>
             <div>
-                {name}: {value}
+                {name ? `${name}:`: null} {value}
             </div>
         </li>
         )
      );
 }
  
-export default RouteAuthor;
+export default RouteTextOutput;
