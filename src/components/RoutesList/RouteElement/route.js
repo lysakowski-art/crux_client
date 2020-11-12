@@ -19,7 +19,9 @@ const Route = () => {
               <Card.Body>
               <blockquote className="blockquote mb-0">
                 <ul>
-                 <RouteTextOutput param="route_author" id={id}value={routeAuthor} setValue={setRouteAuthor} name={t("author")}/>  
+                  <li>
+                    <RouteTextOutput param="route_author" id={id}value={routeAuthor} setValue={setRouteAuthor} name={t("author")}/>  
+                  </li>
                  {/* <RouteTextOutput param="route_author" id={id}value={routeAuthor} setValue={setRouteAuthor} name={t("author")}/>  
                  <RouteTextOutput param="route_author" id={id}value={routeAuthor} setValue={setRouteAuthor} name={t("author")}/>   */}
 
@@ -27,7 +29,7 @@ const Route = () => {
                   <li>{t("type")}: {routeType ? t("sport"): t("self")}</li>
                   <li>{t("expansion_bolts/placemant")}: {bolts}</li>
                   <p>
-                 <RouteTextOutput param="route_description" id={id}value={routeDescription} setValue={setRouteDescription} name={t("opis")}/>  
+                 <RouteTextOutput param="route_description" id={id}value={routeDescription} setValue={setRouteDescription} textarea={true} name={null}/>  
                   </p>
                 </ul>
                 <footer className="blockquote-footer">

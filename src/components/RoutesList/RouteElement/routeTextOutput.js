@@ -5,7 +5,7 @@ import {useTranslation} from "react-i18next"
 import axios from 'axios';
 // import { useEffect } from 'react';
 
-const RouteTextOutput = ({name, value, setValue, id, param}) => {
+const RouteTextOutput = ({name, value, setValue, id, param, textarea}) => {
     const [prevValue, setPrevValue] = useState(value)
     const [editable, setEditable] = useState(false)
     const [data, setData] = useState({})
@@ -65,10 +65,10 @@ const RouteTextOutput = ({name, value, setValue, id, param}) => {
     },[value])
     return ( 
         editable ? (
-            <li onDoubleClick={handleDoubleClick}>
-                <div>
+
+                <div onDoubleClick={handleDoubleClick}>
                 {name ? `${name}:`: null}
-                <input type="text" value={value} style={{border: "none", borderBottom: "1px solid #000"}} onChange={handleChange}/>
+                {textarea?<textarea type="text" value={value} style={{width: "100%", height: "200px"}} onChange={handleChange}/>:<input type="text" value={value} style={{border: "none", borderBottom: "1px solid #000"}} onChange={handleChange}/>}
                 <Button variant="light" onClick={handleConfirm}>
                     {t('confirm')}
                 </Button>
@@ -76,13 +76,13 @@ const RouteTextOutput = ({name, value, setValue, id, param}) => {
                     {t('cancel')}
                 </Button>
             </div>
-            </li>
+
         ) : (
-        <li onDoubleClick={handleDoubleClick}>
-            <div>
+
+            <div onDoubleClick={handleDoubleClick}>
                 {name ? `${name}:`: null} {value}
             </div>
-        </li>
+
         )
      );
 }
