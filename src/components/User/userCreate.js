@@ -10,6 +10,7 @@ const UserCreate = ({registerData, handleClose, content, endpoint}) => {
     e.preventDefault();
 
     if(EmailValidator.validate(registerData["email_adress"])){
+      if(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(registerData["password"])){
       axios
         .post(url, registerData, { withCredentials: true })
         .then(res=>{
@@ -27,6 +28,9 @@ const UserCreate = ({registerData, handleClose, content, endpoint}) => {
         .catch(error=>{
           console.log(error)
         })
+      } else{
+        alert("Password must contain minimum eight characters, at least one letter, one number and one special character.")
+      }
     } else {
       alert("Not correct email adress")
     }
