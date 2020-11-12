@@ -15,8 +15,8 @@ const App = () => {
   const [loading, setLoading] = useState(true)
   const url = "http://127.0.0.1:8000/check_session";
   const {setLoggedIn, setUserName, responseMessage, showInfo, userType, setUserType} = useContext(GlobalContext)
-  useEffect( async () => {
-    await axios
+  useEffect(() => {
+    axios
       .get(url, { withCredentials: true })
       .then((res) => {
         if (res.status === 200) {

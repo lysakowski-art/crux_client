@@ -10,8 +10,8 @@ const AddRegion = ({as, value, setValue, name}) => {
     const [loading, setLoading] = useState(true)
     const {t}=useTranslation();
     const URI = `http://127.0.0.1:8000/regions`;
-    useEffect(async () => {
-        await axios
+    useEffect(() => {
+        axios
           .get(URI)
           .then((res) => {
             if (res.status === 200) {

@@ -1,7 +1,6 @@
 import React,{useContext, useState} from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import {useTranslation} from "react-i18next";
-import LoginPanel from "../LoginPanel";
 import LogoutPanel from "../LogoutPanel";
 import {GlobalContext} from "../Context/globalProvider"
 import "./_headers.scss"
@@ -28,9 +27,9 @@ const Header = ({setLoggedIn, userName, setUserName, setLoading}) => {
             <Nav.Link href="/routes">{t("routes")}</Nav.Link>
             <Nav.Link href="/about">{t("about")}</Nav.Link>
             <Nav.Link href="/contact">{t("contact")}</Nav.Link>
+            <Nav.Link href="/sign" className="login-register">{t("login")} / {t("register")}</Nav.Link>
           </Nav>
-        
-          {loggedIn ? <LogoutPanel endpoint="auth" content={t("logout")}/> : (<LoginPanel setShow={setShow} show={show}/>)}
+          {loggedIn ? <LogoutPanel endpoint="auth" content={t("logout")}/> : null}
           <Button variant="secondary" onClick={changeLanguage}>{t("lng").toUpperCase()}</Button>
         </Navbar.Collapse>
       </Navbar>

@@ -14,7 +14,6 @@ const NotLoggedIn = () => {
                   <Card.Text>
                     {t('if you want to join')}
                   </Card.Text>
-                  {/* <Button variant="dark">Go somewhere</Button> */}
                 </Card.Body>
                 <Card.Footer className="text-muted">{t('have a nice day')}</Card.Footer>
             </Card>

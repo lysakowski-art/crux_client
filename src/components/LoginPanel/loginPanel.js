@@ -8,7 +8,7 @@ import UserDestroy from "../User/userDestroy"
 import "./_loginPanel.scss";
 
 
-const LoginPanel = ({show,setShow}) => {
+const LoginPanel = () => {
     const [email_adress, setEmail_adress] = useState("")
     const [password, setPassword] = useState("")
     const [loginData, setLoginData] = useState({})
@@ -20,27 +20,23 @@ const LoginPanel = ({show,setShow}) => {
       })
     },[email_adress, password])
     const {t} = useTranslation();
-    const handleShow = () => setShow(true);
     return ( 
-        <>
-            <Form className="login_panel">
-                <Form.Row>
-                  <Col xs={3}>
-                    <UserInput placeholder={t("email")} setValue={setEmail_adress} label={false}/>
-                  </Col>
-                  <Col xs={3}>
-                    <UserInput placeholder={t("password")} type="password"  setValue={setPassword} label={false}/>
-                  </Col >
-                  <Col xs={1.5}>
-                    <UserSubmit content={t("login")} variant="light" endpoint="auth" loginData={loginData}/>
-                  </Col> 
-                  <Col xs={4}>
-                    <UserDestroy content={t("register")} variant="light" handleShow={handleShow}/>
-                  </Col>
-                </Form.Row>
-            </Form>
-            <RegisterPanel show={show} setShow={setShow}/>
-        </>
+      <>
+        <Form className="login_panel">
+          <Form.Row style={{justifyContent: "center"}}>
+            <h3>{t("login")}</h3>
+          </Form.Row>
+          <Form.Row>
+            <UserInput placeholder={t("email")} setValue={setEmail_adress} label={false}/>
+          </Form.Row>
+          <Form.Row>
+            <UserInput placeholder={t("password")} type="password"  setValue={setPassword} label={false}/>
+          </Form.Row>
+          <Form.Row style={{justifyContent: "center"}}>
+            <UserSubmit content={t("login")} variant="light" endpoint="auth" loginData={loginData}/>
+          </Form.Row>
+        </Form>
+      </>
      );
 }
  

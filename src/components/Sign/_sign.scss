@@ -1,0 +1,14 @@
+.sign{
+    background-color: #00000030;
+    width:50%;
+    padding: 2em;
+    .form-row{
+        .form-group{
+            padding-top: 1em;
+            text-align: center;
+            input{
+                width: 20em!important;
+            }
+        }
+    }
+}

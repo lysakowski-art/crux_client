@@ -1,7 +1,7 @@
 .wrapper {
   min-height: calc(100vh - 30px);
   overflow: hidden;
-
+  background-color: lighten(#343a40,20);
   .main{
     // max-width: 100%;
     margin-top: 1rem;

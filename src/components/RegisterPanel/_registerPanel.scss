@@ -1,17 +1,8 @@
 .register_panel{
     .form-row{
-        .form-group{
-            margin:0 auto;
-        }
+        justify-content: center;
     }
-    .form-row{
-
-        button{
-            margin:0 auto;
-        }
+    .create-user-modal{
+        justify-content: center!important;
     }
-
-                .create-user-modal{
-                justify-content: center!important;
-            }
 }

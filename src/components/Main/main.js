@@ -8,7 +8,7 @@ import Routes from "../RoutesList";
 import About from "../About";
 import Contact from "../Contact";
 import NotFound from "../NotFound";
-
+import Sign from "../Sign";
 const Main = () => {
   return (
     <Container className="container main" fluid>
@@ -34,6 +34,11 @@ const Main = () => {
             exact
             path="/contact"
             component={() => <Contact/>}
+          />
+          <Route
+            exact
+            path="/sign"
+            component={() => <Sign/>}
           />
           <Route component={() => <NotFound/>} />
         </Switch>

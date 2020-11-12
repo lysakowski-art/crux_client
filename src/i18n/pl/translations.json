@@ -26,7 +26,7 @@
     "logout": "Wyloguj",
     "sign": "Podaj",
     "register panel": "Panel Rejestracji",
-    "register": "Zarejestruj się!",
+    "register": "Zarejestruj",
     "glad to see you are joining to comunity": "Cieszymy się widząc, że dołączasz do naszej społeczności!",
     "if you want to join": "Jeśli nie jesteś zarejestrowany/ zalogowany niestety nie możesz dodać żadnej drogi. Dołącz do społeczności!",
     "have a nice day": "Miłego dnia!",
@@ -35,5 +35,6 @@
     "for the insiders": "Tylko dla wtajemniczonych",
     "scale": "Skala",
     "cancel": "Anuluj",
-    "confirm": "Potwierdź"
+    "confirm": "Potwierdź",
+    "or": "lub"
 }
