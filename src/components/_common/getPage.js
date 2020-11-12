@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"
+import ReactHtmlParser from "react-html-parser";
 
 const Page = ({ pageId }) => {
   const [page, setPage] = useState({});
@@ -17,7 +18,7 @@ const Page = ({ pageId }) => {
 
   return (
     <div className="page">
-      <div key={page._id}>{page.page_content}</div>
+      <div key={page._id}>{ReactHtmlParser(page.page_content)}</div>
     </div>
   );
 };
