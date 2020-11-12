@@ -10,8 +10,8 @@ import RouteAuthor from "./routeAuthor"
 
 const Route = () => {
     const {t} =useTranslation()
-    const {userType,id} =useContext(GlobalContext)
-    const {routeAuthor, setRouteAuthor} = useContext(RouteContext)
+    const {userType} =useContext(GlobalContext)
+    const {routeAuthor, setRouteAuthor,id} = useContext(RouteContext)
     return ( 
         <ListGroup.Item key={id}>
             <Card className="route-cnt">
@@ -19,7 +19,7 @@ const Route = () => {
               <Card.Body>
               <blockquote className="blockquote mb-0">
                 <ul>
-                 <RouteAuthor param="route_author" value={routeAuthor} setValue={setRouteAuthor} name={t("author")}/>  
+                 <RouteAuthor param="route_author" id={id}value={routeAuthor} setValue={setRouteAuthor} name={t("author")}/>  
                   {/* <li>{t("scale")}: {scales.calculate("french",route_rank)}</li> */}
                   {/* <li>{t("type")}: {route_type ? t("sport"): t("self")}</li> */}
                   {/* <li>{t("expansion_bolts/placemant")}: {placemant_and_belay_anchor}</li> */}
