@@ -15,10 +15,12 @@ Crux of Poland app enables to the recording and organization of polish climbing 
 - deleting routes by admin/moderator
 - some of updating routes by moderators
 
+
 in progress...
 - rest of updating routes by moderators,
 - admin panel to: give "moderator" type for ordinary user, deleting/deactivating users
 - at home_page: google maps view to see all climbing regions 
+- contact send mails
 
 ### Packages I have chosen:
 * Axios
@@ -27,6 +29,7 @@ in progress...
 * Sass
 * React Router
 * ContextApi
+* React-HTML-Parser
 
 ## Requirements
 
