@@ -21,6 +21,7 @@ in progress...
 - admin panel to: give "moderator" type for ordinary user, deleting/deactivating users
 - at home_page: google maps view to see all climbing regions 
 - contact send mails
+- design for god sake
 
 ### Packages I have chosen:
 * Axios
