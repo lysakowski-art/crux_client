@@ -10,7 +10,7 @@ const RegisterPanel = ({show, setShow,setResponseMessage,setShowResponse}) => {
     const [emailAdress, setEmailAdress] = useState("")
     const [password, setPassword] = useState("")
     const [registerData, setRegisterData] = useState({})
-    
+
     useEffect(()=>{
       setRegisterData({
         "user_name": userName,
