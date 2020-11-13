@@ -1,0 +1,33 @@
+.about{
+    display: flex;  
+    justify-content: space-between;
+    .page{
+        width:60%
+    }  
+    .self-image-container{
+        width:35%;
+        background-image: url("../../images/myself.jpg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+@media(max-width: 600px){
+    .page-container{
+        padding: 0.5em;
+    }
+    .about{
+        display: flex;  
+        flex-direction: column;
+        .page{
+            width:100%;
+        }  
+        .self-image-container{
+            width:100%;
+            background-image: url("../../images/myself.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }   
+}
