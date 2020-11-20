@@ -1,4 +1,4 @@
-import React,{useContext, useState} from "react";
+import React,{useContext} from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
 import {useTranslation} from "react-i18next";
 import LogoutPanel from "../LogoutPanel";
@@ -8,7 +8,6 @@ import "./_headers.scss"
 const Header = ({setLoggedIn, userName, setUserName, setLoading}) => {
   const {lang, setLang, loggedIn} = useContext(GlobalContext)
   const {i18n,t} = useTranslation();
-  const [show, setShow] = useState(false);
 
   const changeLanguage = () => {
         i18n.changeLanguage(i18n.language === "pl" ? "en" : "pl");

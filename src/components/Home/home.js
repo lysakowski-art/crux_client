@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import Page from "../_common/getPage";
-import {Col} from "react-bootstrap"
 import {ParallaxBanner} from 'react-scroll-parallax'
 import {GlobalContext} from '../Context/globalProvider'
 import "./_home.scss"

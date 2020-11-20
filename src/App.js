@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Spinner } from 'react-bootstrap'
 import axios from "axios"
-
 import "./_app.scss"
 // components
 import Header from "./components/Header";
@@ -14,31 +13,37 @@ const App = () => {
   const [cookieStatus, setCookieStatus] = useState({});
   const [loading, setLoading] = useState(true)
   const url = "http://127.0.0.1:8000/check_session";
-  const {setLoggedIn, setUserName, responseMessage, showInfo, userType, setUserType} = useContext(GlobalContext)
+  const {setLoggedIn,setUserName, setUserType} = useContext(GlobalContext)
   useEffect(() => {
-    axios
-      .get(url, { withCredentials: true })
-      .then((res) => {
-        if (res.status === 200) {
-          if (Object.entries(cookieStatus).length === 0) {
-            if (res.data.loggedIn === true) {
-              setLoggedIn(res.data.loggedIn);
-              setUserName(res.data.user_name);
-              setUserType(res.data.user_type);
-              setCookieStatus(res.data)
-              setLoading(false)
+    if (Object.entries(cookieStatus).length === 0 && loading){
+      const checkSession = async () => {
+        await axios
+        .get(url, { withCredentials: true })
+        .then((res) => {
+          if (res.status === 200) {
+            if (Object.entries(cookieStatus).length === 0) {
+              if (res.data.loggedIn === true) {
+                setLoggedIn(res.data.loggedIn);
+                setUserName(res.data.userName);
+                setUserType(res.data.userType);
+                setCookieStatus(res.data)
+                setLoading(false)
+              }
             }
+          } else if (res.status === 400) {
+            console.log(res.message);
+            setLoading(false)
           }
-        } else if (res.status === 400) {
-          console.log(res.message);
+        })
+        .catch((error) => {
+          console.log(error)
           setLoading(false)
-        }
-      })
-      .catch((error) => {
-        console.log(error)
-        setLoading(false)
-      });
-  }, []);
+        });
+      };
+      checkSession();
+    }
+    
+  }, [cookieStatus,loading, setUserName, setLoggedIn, setUserType]);
 
   return loading ?  <div className="loading"><Spinner animation="grow" variant="dark" size="xl"/></div>
 :  (

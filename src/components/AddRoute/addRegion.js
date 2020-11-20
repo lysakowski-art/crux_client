@@ -9,10 +9,12 @@ const AddRegion = ({as, value, setValue, name}) => {
     const [allRegions, setAllRegions] = useState([]);
     const [loading, setLoading] = useState(true)
     const {t}=useTranslation();
-    const URI = `http://127.0.0.1:8000/regions`;
+    const url = `http://127.0.0.1:8000/regions`;
     useEffect(() => {
-        axios
-          .get(URI)
+        const getRegions = async () => {
+          if(loading){
+          await axios
+          .get(url)
           .then((res) => {
             if (res.status === 200) {
               if (Object.entries(allRegions).length === 0) {
@@ -25,9 +27,12 @@ const AddRegion = ({as, value, setValue, name}) => {
             console.log(error);
             setLoading(false)
           });
-      }, []);
+          }
+        }
+        getRegions();
+      }, [url, allRegions,loading]);
     const sortedRegions = allRegions.sort((a,b)=>(
-        a.group_of_regions > b.group_of_regions ? 1 : -1
+        a.groupRegions > b.groupRegions ? 1 : -1
     ))
 
     // handle
@@ -39,7 +44,7 @@ const AddRegion = ({as, value, setValue, name}) => {
         <Form.Group>
           <Form.Label>{t(name)}</Form.Label>
           <Form.Control as={as} onChange={handleSelect}>
-           {sortedRegions.map((el)=><option key={el._id} value={el._id}>{el.region_name} ({el.group_of_regions})</option>)}
+           {sortedRegions.map((el)=><option key={el._id} value={el._id}>{el.regionName} ({el.groupOfRegions})</option>)}
           </Form.Control>
         </Form.Group>
      );

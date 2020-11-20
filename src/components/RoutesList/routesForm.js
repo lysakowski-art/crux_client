@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Col } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import AddRegion from "../AddRoute/addRegion";
 import AddRouteRange from "../AddRoute/addRouteRange";
 import SubmitConditions from "./submitConditions"

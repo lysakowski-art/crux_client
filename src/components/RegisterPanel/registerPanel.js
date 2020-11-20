@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {Form,Col,Modal, Button} from 'react-bootstrap'
+import {Form} from 'react-bootstrap'
 import UserInput from "../User/userInput"
 import UserCreate from "../User/userCreate"
 import {useTranslation} from 'react-i18next'
@@ -13,10 +13,10 @@ const RegisterPanel = ({setResponseMessage,setShowResponse}) => {
 
     useEffect(()=>{
       setRegisterData({
-        "user_name": userName,
-        "email_adress": emailAdress,
-        "password": password,
-        "user_type": "user"
+        userName,
+        emailAdress,
+        password,
+        "userType": "user"
       })
     },[userName,emailAdress,password])
     const {t} = useTranslation();

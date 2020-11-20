@@ -6,12 +6,13 @@ import {useTranslation} from 'react-i18next'
 
 const SubmitForm = ({ type, name, variant, data }) => {
   const {t}=useTranslation();
-  const URI = "http://127.0.0.1:8000/routes"
+  
+  const url = "http://127.0.0.1:8000/routes"
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log(data)
-    axios
-      .post(URI,data)
+    const createRoute = async () => {
+      await axios
+      .post(url,data)
       .then(res=>{
         console.log(res)
         alert(res.data.message)
@@ -19,6 +20,8 @@ const SubmitForm = ({ type, name, variant, data }) => {
       .catch(error=>{
         console.log(error)
       })
+    }
+    createRoute();
   }
 
   return (

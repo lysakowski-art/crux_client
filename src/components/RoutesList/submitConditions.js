@@ -12,9 +12,8 @@ const SubmitConditions = ({region,routeRank, routes, setRoutes, variant, name}) 
     const {t} =useTranslation()
     const handleClick = (e) => {
         e.preventDefault()
-        const getRouteWithConditions = (uri) =>{
-            console.log(uri)
-            axios
+        const getRouteWithConditions = async (uri) =>{
+            await axios
                 .get(uri)
                 .then(res=>{
                     setRoutes(res.data)

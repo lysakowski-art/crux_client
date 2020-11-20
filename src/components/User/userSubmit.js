@@ -11,31 +11,35 @@ const UserSubmit = ({variant,loginData, content,endpoint}) => {
     const history = useHistory()
     const handleSubmit=(e)=>{
         e.preventDefault();
-        axios
-          .post(url,loginData, { withCredentials: true })
-          .then(res=>{
-              if(res.status === 201){
-                  setLoggedIn(true)
-                  setUserName(res.data.user_name)
-                  console.log(res.data.user_type)
-                  setUserType(res.data.user_type)
-                  history.push("/")
-                  setLoading(false)
-              } else if (res.status === 404){
-                  alert(res.data.message)
-                  setLoading(false)
-              } else if (res.status === 409){
-                  alert(res.data.message)
-                  setLoading(false)
-              } else if (res.status === 400){
-                alert(res.data.message)
-                setLoading(false)
+        const logUser = async () => {
+            if(loading){
+                await axios
+                .post(url,loginData, { withCredentials: true })
+                .then(res=>{
+                    if(res.status === 201){
+                        setLoggedIn(true)
+                        setUserName(res.data.userName)
+                        setUserType(res.data.userType)
+                        history.push("/")
+                        setLoading(false)
+                    } else if (res.status === 404){
+                        alert(res.data.message)
+                        setLoading(false)
+                    } else if (res.status === 409){
+                        alert(res.data.message)
+                        setLoading(false)
+                    } else if (res.status === 400){
+                      alert(res.data.message)
+                      setLoading(false)
+                  }
+                })
+                .catch(error=>{
+                  console.log(error)
+                })
             }
-          })
-          .catch(error=>{
-            console.log(error)
-          })
-      }
+        }
+        logUser();
+    }
     return ( 
         <Button variant={variant} onClick={handleSubmit}>
             {content}
