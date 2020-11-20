@@ -12,10 +12,16 @@ Crux of Poland app enables to the recording and organization of polish climbing 
 - login user
 - creating routes
 - managing state with context api
+- deleting routes by admin/moderator
+- some of updating routes by moderators
+
 
 in progress...
-- deleting routes by moderators
-- updating routes by moderators
+- rest of updating routes by moderators,
+- admin panel to: give "moderator" type for ordinary user, deleting/deactivating users
+- at home_page: google maps view to see all climbing regions 
+- contact send mails
+- design for god sake
 
 ### Packages I have chosen:
 * Axios
@@ -24,6 +30,7 @@ in progress...
 * Sass
 * React Router
 * ContextApi
+* React-HTML-Parser
 
 ## Requirements
 
@@ -39,8 +46,11 @@ Node.js v 12.16.1 or higher
 3. `npm i`
 
 4. `npm start`
-
-**Have to run on  127.0.0.1:3000!**
+**IMPORTANT!**
+* **Have to run on  127.0.0.1:3000**
+* To log in as Admin use this login data: {email: "super_admin@mail.com", password: "password"}
+* if you click on "submit" in "Climbing Routes" tab you will get all routes
+* doubleclick on item in view route item to change content(title, author or description rest is in progress :) )
 
 ## License 
 
