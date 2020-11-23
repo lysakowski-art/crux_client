@@ -8,6 +8,7 @@ import Routes from "../RoutesList";
 import About from "../About";
 import Contact from "../Contact";
 import NotFound from "../NotFound";
+import ConfirmPanel from "../ConfirmPanel"
 import Sign from "../Sign";
 const Main = () => {
   return (
@@ -40,6 +41,10 @@ const Main = () => {
             path="/sign"
             component={() => <Sign/>}
           />
+          <Route 
+          exact
+          path="/confirm"
+          component={() =><ConfirmPanel />}/>
           <Route component={() => <NotFound/>} />
         </Switch>
       </Row>
