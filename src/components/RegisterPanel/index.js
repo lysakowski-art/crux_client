@@ -1,2 +1,2 @@
 import RegisterPanel from "./registerPanel";
-export default RegisterPanel
+export default RegisterPanel;

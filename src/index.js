@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import './i18n/i18n';
+import "./i18n/i18n";
 import App from "./App";
-// import { ParallaxProvider } from 'react-scroll-parallax';
-import {GlobalProvider} from './components/Context/globalProvider'
+import { ParallaxProvider } from "react-scroll-parallax";
+import { GlobalProvider } from "./components/Context/globalProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <ParallaxProvider> */}
-    <GlobalProvider>
+    <ParallaxProvider>
+      <GlobalProvider>
         <App />
       </GlobalProvider>
-    {/* </ParallaxProvider> */}
+    </ParallaxProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

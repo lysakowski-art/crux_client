@@ -1,2 +1,2 @@
-import ConfirmPanel from "./confirmPanel"
-export default ConfirmPanel
+import ConfirmPanel from "./confirmPanel";
+export default ConfirmPanel;

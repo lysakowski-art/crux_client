@@ -1,2 +1,2 @@
-import Sign from "./sign"
-export default Sign
+import Sign from "./sign";
+export default Sign;

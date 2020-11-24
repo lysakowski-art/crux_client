@@ -1,2 +1,2 @@
-import LogoutPanel from './logoutPanel'
-export default LogoutPanel
+import LogoutPanel from "./logoutPanel";
+export default LogoutPanel;

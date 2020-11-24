@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Col } from "react-bootstrap";
 import RouteCheckbox from "./routeCheckbox";
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from "react-i18next";
 const AddRouteInput = ({
   name,
   value,
@@ -11,12 +11,12 @@ const AddRouteInput = ({
   checkbox = false,
   checkboxValue,
   setCheckboxValue,
-  as
+  as,
 }) => {
   const handleValue = (e) => {
     setValue(e.target.value);
   };
-  const {t, i18n}=useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Form.Row>
@@ -29,13 +29,13 @@ const AddRouteInput = ({
             onChange={handleValue}
             rows={rows}
             as={as}
-            value={checkboxValue&&type==="number"? 1 : value}
+            value={checkboxValue && type === "number" ? 1 : value}
           />
         </Form.Group>
       </Col>
       {checkbox ? (
-            <RouteCheckbox value={checkboxValue} setValue={setCheckboxValue} />
-          ) : null}
+        <RouteCheckbox value={checkboxValue} setValue={setCheckboxValue} />
+      ) : null}
     </Form.Row>
   );
 };
