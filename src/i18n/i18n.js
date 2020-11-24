@@ -18,7 +18,7 @@ i18n
             }
         },
 
-        debug: true,
+        debug: false,
         lng: "pl",
         ns: ["translations"],
         defaultNS: "translations",

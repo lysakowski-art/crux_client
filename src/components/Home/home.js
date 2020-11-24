@@ -16,9 +16,9 @@ const Home = () => {
   }
   return (
     <div className="page-container">
-      <ParallaxBanner layers={[bannerImage]} style={bannerStyle}>
+      {/* <ParallaxBanner layers={[bannerImage]} style={bannerStyle}> */}
         <h1>Crux of Poland</h1>
-      </ParallaxBanner>
+      {/* </ParallaxBanner> */}
       <Page pageId={lang ?  homePL : homeEN}/>
     </div>
   );
