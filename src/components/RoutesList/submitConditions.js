@@ -9,7 +9,7 @@ const SubmitConditions = ({region,routeRank, routes, setRoutes, variant, name}) 
     const routesRanksUri = routesUri+`${routeRank}/random`
     const routesRegionUri = routesUri+`${0}/${region}`
     const routesConditionsUri = routesUri+`${routeRank}/${region}`
-    const {t} =useTranslation()
+    const {t, i18n} =useTranslation()
     const handleClick = (e) => {
         e.preventDefault()
         const getRouteWithConditions = async (uri) =>{

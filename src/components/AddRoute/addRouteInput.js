@@ -16,7 +16,7 @@ const AddRouteInput = ({
   const handleValue = (e) => {
     setValue(e.target.value);
   };
-  const {t}=useTranslation();
+  const {t, i18n}=useTranslation();
 
   return (
     <Form.Row>

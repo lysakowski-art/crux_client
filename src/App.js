@@ -8,12 +8,17 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import {GlobalContext} from "./components/Context/globalProvider"
+import {useTranslation} from "react-i18next"
 
 const App = () => {
   const [cookieStatus, setCookieStatus] = useState({});
   const [loading, setLoading] = useState(true)
   const url = "http://127.0.0.1:8000/check_session";
-  const {setLoggedIn,setUserName, setUserType} = useContext(GlobalContext)
+  const {setLoggedIn,setUserName, setUserType, lang, setLang} = useContext(GlobalContext)
+  console.log(lang)
+  const {i18n, t} = useTranslation()
+
+
   useEffect(() => {
     if (Object.entries(cookieStatus).length === 0 && loading){
       const checkSession = async () => {

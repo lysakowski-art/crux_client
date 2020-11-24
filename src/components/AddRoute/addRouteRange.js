@@ -5,7 +5,7 @@ import {useTranslation} from 'react-i18next'
 
 
 const AddRouteRange = ({name, subName, value, setValue, type,max, min}) => {
-    const {t}=useTranslation();
+    const {t, i18n}=useTranslation();
     //states
     const [scaleName, setScaleName] = useState("french");
     // options

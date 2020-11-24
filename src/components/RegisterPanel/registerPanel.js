@@ -19,7 +19,7 @@ const RegisterPanel = ({setResponseMessage,setShowResponse}) => {
         "userType": "user"
       })
     },[userName,emailAdress,password])
-    const {t} = useTranslation();
+    const {t, i18n} = useTranslation();
 
     return ( 
         <div>

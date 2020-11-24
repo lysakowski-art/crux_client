@@ -7,7 +7,7 @@ import {GlobalContext} from '../Context/globalProvider'
 
 const LogoutPanel = ({endpoint,content}) => {
     const {userName, setLoggedIn, loggedIn} = useContext(GlobalContext)
-    const {t} = useTranslation();
+    const {t, i18n} = useTranslation();
     const url = `http://127.0.0.1:8000/${endpoint}`
     const handleSubmit=(e)=>{
         e.preventDefault();

@@ -5,7 +5,7 @@ import LogoutPanel from "../LogoutPanel";
 import {GlobalContext} from "../Context/globalProvider"
 import "./_headers.scss"
 
-const Header = ({setLoggedIn, userName, setUserName, setLoading}) => {
+const Header = () => {
   const {lang, setLang, loggedIn} = useContext(GlobalContext)
   const {i18n,t} = useTranslation();
 

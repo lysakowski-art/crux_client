@@ -4,7 +4,7 @@ import RegisterPanel from "../RegisterPanel"
 import {useTranslation} from "react-i18next"
 import "./_sign.scss"
 const Sign = () => {
-    const {t} =useTranslation();
+    const {t, i18n} =useTranslation();
     
     return ( 
         <div className="sign">

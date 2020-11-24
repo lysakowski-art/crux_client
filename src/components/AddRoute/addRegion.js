@@ -8,7 +8,7 @@ import {useTranslation} from 'react-i18next'
 const AddRegion = ({as, value, setValue, name}) => {
     const [allRegions, setAllRegions] = useState([]);
     const [loading, setLoading] = useState(true)
-    const {t}=useTranslation();
+    const {t, i18n}=useTranslation();
     const url = `http://127.0.0.1:8000/regions`;
     useEffect(() => {
         const getRegions = async () => {

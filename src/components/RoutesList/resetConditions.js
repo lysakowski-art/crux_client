@@ -3,7 +3,7 @@ import {Button} from 'react-bootstrap';
 import {useTranslation} from 'react-i18next'
 
 const ResetConditions = ({setRegion, setRouteRank, variant, name}) => {
-    const {t} =useTranslation()
+    const {t, i18n} =useTranslation()
     const handleClick = (e) => {
         setRouteRank(0)
         setRegion("random")

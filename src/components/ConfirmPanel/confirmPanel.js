@@ -3,7 +3,7 @@ import {Row, Button} from "react-bootstrap"
 import {useTranslation} from "react-i18next"
 
 const ConfirmPanel = () => {
-    const {t} = useTranslation()    
+    const {t, i18n} = useTranslation()    
     const url = window.location.href
     // const endpoint = url.slice(26)
 
