@@ -1,18 +1,30 @@
 .contact-container{
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-color: #00000050;
-    padding: 2rem 3rem;
-    .contact-form{      
-        padding: 3rem 2rem;
-        margin: 0 auto
+    padding: 1rem 2rem;
+    text-align: center;
+    margin: 1rem 0;
+    .contact-form{
+        padding: 1rem 0 0 0;
+        .form-control{
+            width: 90%;
+            margin: 0 auto
+        }
     }
 }
 @media(max-width: 600px){
+    .wrapper .main {
+        max-width: 100%;
     .contact-container{
+        width: 100%;
         padding: 1rem 1rem;
         .contact-form{      
             padding: 1rem 0;
+            .form-control{
+                width: 100%;
+            }
         }
     }
+}
 }

@@ -16,13 +16,10 @@ const Header = () => {
   return (
     <header>
       <Navbar bg="dark" expand="lg" variant="dark">
-        <Navbar.Brand href="/">Crux of Poland</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Crux of Poland</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/">
-              {t("home")}
-            </Nav.Link>
             <Nav.Link as={Link} to="/add_route">
               {t("add_route")}
             </Nav.Link>

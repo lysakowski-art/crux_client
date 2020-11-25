@@ -50,9 +50,9 @@ const ContactForm = () => {
   return (
     <div className="contact-container">
       <Form className="contact-form">
-        <Form.Group size="sm">
-          <Form.Label>{t("email")}</Form.Label>
+        <Form.Group>
           <Form.Control
+            style={{fontSize: "18px"}}
             value={senderMail}
             onChange={handleMailChange}
             type="email"
@@ -60,8 +60,9 @@ const ContactForm = () => {
             size="lg"
           />
         </Form.Group>
-        <Form.Group size="md">
+        <Form.Group>
           <Form.Control
+            style={{fontSize: "18px"}}
             value={mailContent}
             onChange={handleContentChange}
             as="textarea"

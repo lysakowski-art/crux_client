@@ -39,7 +39,7 @@ const AddRouteRange = ({ name, subName, value, setValue, type, max, min }) => {
       </Col>
       <Col md={6}>
         <Form.Label>{t(name)}</Form.Label>
-        <Form.Control as={type} onChange={handleRange}>
+        <Form.Control as={type} value={value} onChange={handleRange}>
           {rankOptions}
         </Form.Control>
       </Col>

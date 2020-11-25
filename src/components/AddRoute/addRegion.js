@@ -41,7 +41,7 @@ const AddRegion = ({ as, value, setValue, name }) => {
   return (
     <Form.Group>
       <Form.Label>{t(name)}</Form.Label>
-      <Form.Control as={as} onChange={handleSelect}>
+      <Form.Control as={as} value={value} onChange={handleSelect}>
         {sortedRegions.map((el) => (
           <option key={el._id} value={el._id}>
             {el.regionName} ({el.groupOfRegions})
